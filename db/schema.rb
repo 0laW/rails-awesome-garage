@@ -14,15 +14,6 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_15_085359) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "cars", force: :cascade do |t|
-    t.string "brand"
-    t.string "model"
-    t.integer "year"
-    t.string "fuel"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "favourites", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
