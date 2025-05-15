@@ -1,5 +1,8 @@
 class Car < ApplicationRecord
   belongs_to :owner
-  belongs_to :favourite
-  belongs_to :review
+
+  validates :brand, presence: true
+  validates :model, presence: true
+  validates :year, presence: true, numericality: { only_integer: true }
+  validates :fuel, presence: true
 end
