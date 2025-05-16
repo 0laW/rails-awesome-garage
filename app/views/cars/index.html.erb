@@ -1,0 +1,10 @@
+<h1>All cars</h1>
+<%= link_to 'My Garage', favourites_path %>
+<% @cars.each do |car| %>
+    <h2><%= car.brand %></h2>
+    <h3><%= car.model %></h3>
+    <p><%= car.created_at.strftime("%m/%d/%Y") %></p>
+    <p><%= car.owner.nickname %></p>
+    <%= link_to 'View car', car_path(car) %>
+  <hr>
+<% end %>

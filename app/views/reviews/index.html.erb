@@ -1,0 +1,10 @@
+<h1>All reviews</h1>
+<ul class="list-group">
+  <% @reviews.each do |review| %>
+    <li>
+      <h2><%= review.rating %></h2>
+      <h3><%= review.comment %></h3>
+      <p><%= review.created_at.strftime("%m/%d/%Y") %></p>
+    </li>
+  <% end %>
+</ul>
